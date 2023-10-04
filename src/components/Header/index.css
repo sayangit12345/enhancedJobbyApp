@@ -1,0 +1,80 @@
+.navbar-container {
+  background-color: #202020;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-image {
+  width: 80px;
+  margin-left: 25px;
+}
+
+.nav-link {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #f8fafc;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.nav-link-sm {
+  color: #f8fafc;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.logout-icon-sm {
+  background-color: transparent;
+  border-width: 0px;
+  color: #ffffff;
+  height: 15px;
+  width: 15px;
+}
+
+.button2 {
+  background-color: #6366f1;
+  color: #f8fafc;
+  font-family: 'Roboto';
+  border-radius: 5px;
+  border-width: 0px;
+  height: 40px;
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 25px;
+  font-size: 15px;
+}
+.card-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    list-style-type: none;
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav-link {
+    display: none;
+  }
+  .button2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .small-header-icons {
+    display: none;
+  }
+  .logout-icon-sm {
+    display: none;
+  }
+  .header-image {
+    width: 120px;
+  }
+}

@@ -1,0 +1,121 @@
+.profile-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jobs-container {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+.profile-heading {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #6366f1;
+  margin-left: 15px;
+}
+.description-profile {
+  font-family: 'Roboto';
+  font-size: 10px;
+  color: #475569;
+  margin-left: 15px;
+}
+.horizon {
+  width: 250px;
+}
+.description-profile2 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.list-container {
+  list-style-type: none;
+  height: 300px;
+  width: 600px;
+  padding-left: 0;
+}
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+}
+
+.search-input {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  border: 1ps solid #475569;
+  border-radius: 5px;
+  width: 700px;
+  height: 30px;
+}
+.bottom-containers {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 730px;
+}
+
+.search-button {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border-width: 0px;
+}
+
+.search-icon {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    height: 100px;
+  }
+  .jobs-container {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+  }
+  .search-input {
+    width: 260px;
+    height: 30px;
+  }
+  .list-container {
+    width: 150px;
+    padding-left: 0;
+  }
+  .bottom-containers {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .jobs-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-input {
+    width: 700px;
+    height: 30px;
+  }
+  .list-container {
+    width: 750px;
+    padding-left: 0;
+  }
+}

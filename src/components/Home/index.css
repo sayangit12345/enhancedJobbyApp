@@ -1,0 +1,74 @@
+@media screen and (min-width: 576px) {
+  .main-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+    background-size: cover;
+    height: 100vh;
+  }
+  .heading {
+    font-family: 'Roboto';
+    font-size: 68px;
+    color: #f8fafc;
+  }
+  .description3 {
+    font-family: 'Roboto';
+    font-size: 22px;
+    color: #f8fafc;
+  }
+  .button3 {
+    background-color: #6366f1;
+    color: #f8fafc;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    border-width: 0px;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .card-container2 {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .main-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+    background-size: cover;
+    height: 100vh;
+  }
+  .heading {
+    font-family: 'Roboto';
+    font-size: 28px;
+    color: #f8fafc;
+  }
+  .description3 {
+    font-family: 'Roboto';
+    font-size: 22px;
+    color: #f8fafc;
+  }
+  .button3 {
+    background-color: #6366f1;
+    color: #f8fafc;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    border-width: 0px;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+  }
+  .card-container2 {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250px;
+    width: 250px;
+    margin-top: 20px;
+  }
+}
