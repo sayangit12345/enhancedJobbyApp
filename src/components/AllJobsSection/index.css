@@ -97,6 +97,9 @@
     flex-direction: column;
     width: 260px;
   }
+  .search-input-container {
+    width: 290px;
+  }
   .search-input {
     width: 260px;
     height: 30px;

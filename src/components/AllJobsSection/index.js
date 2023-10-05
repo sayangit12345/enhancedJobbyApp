@@ -99,6 +99,8 @@ class AllJobsSection extends Component {
       this.setState({
         profileData: updatedDataProfile,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 

@@ -40,9 +40,7 @@ const salaryRangesList = [
 
 const FilteredGroup = props => {
   const {changeInputItem, changeInputItemTwo, profileData} = props
-  const {name, profileImageUrl, shortBio} = profileData
 
-  console.log(profileData)
   const onClickInputItem = event => {
     changeInputItem(event.target.value)
   }
@@ -51,13 +49,24 @@ const FilteredGroup = props => {
     changeInputItemTwo(event.target.value)
   }
 
+  const renderProfileDetails = () => {
+    if (profileData.length >= 1) {
+      const {name, profileImageUrl, shortBio} = profileData[0]
+
+      return (
+        <div className="profile-container">
+          <img src={profileImageUrl} alt="profile" className="avatar" />
+          <h1 className="profile-heading">{name}</h1>
+          <p className="description-profile">{shortBio}</p>
+        </div>
+      )
+    }
+    return null
+  }
+
   return (
     <div className="filter-container">
-      <div className="profile-container">
-        <img src={profileImageUrl} alt="profile" className="avatar" />
-        <h1 className="profile-heading">{name}</h1>
-        <p className="description-profile">{shortBio}</p>
-      </div>
+      {renderProfileDetails()}
       <hr className="horizona" />
       <div className="filter-container22">
         <h1 className="description-profile223">Type of Employment</h1>
