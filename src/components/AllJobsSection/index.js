@@ -25,6 +25,7 @@ class AllJobsSection extends Component {
 
   componentDidMount() {
     this.getJobsList()
+    this.onGetProfileDetails()
   }
 
   onEnterSearchInput = () => {
@@ -77,7 +78,6 @@ class AllJobsSection extends Component {
   }
 
   onGetProfileDetails = async () => {
-    this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
     const profileApiUrl = 'https://apis.ccbp.in/profile'
     const optionsProfile = {

@@ -39,8 +39,10 @@ const salaryRangesList = [
 ]
 
 const FilteredGroup = props => {
-  const {changeInputItem, changeInputItemTwo} = props
+  const {changeInputItem, changeInputItemTwo, profileData} = props
+  const {name, profileImageUrl, shortBio} = profileData
 
+  console.log(profileData)
   const onClickInputItem = event => {
     changeInputItem(event.target.value)
   }
@@ -52,15 +54,9 @@ const FilteredGroup = props => {
   return (
     <div className="filter-container">
       <div className="profile-container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/male-avatar-img.png"
-          alt="profile"
-          className="avatar"
-        />
-        <h1 className="profile-heading">Rahul Attuluri</h1>
-        <p className="description-profile">
-          Lead Software Developer and AI-ML expert
-        </p>
+        <img src={profileImageUrl} alt="profile" className="avatar" />
+        <h1 className="profile-heading">{name}</h1>
+        <p className="description-profile">{shortBio}</p>
       </div>
       <hr className="horizona" />
       <div className="filter-container22">
