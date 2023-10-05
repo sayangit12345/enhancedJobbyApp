@@ -29,16 +29,16 @@ const SimilarProductItem = props => {
           </div>
         </div>
       </div>
-      <div className="frog">
+      <div className="similar-itemms-sontainer">
         <h1 className="description55">Description</h1>
         <p className="description6">{jobDescription}</p>
       </div>
-      <div className="cefd">
-        <div className="bcde">
+      <div className="location-item-container">
+        <div className="location-under-container">
           <MdLocationOn className="location-icon" />
           <p className="description5">{location}</p>
         </div>
-        <div className="bcde">
+        <div className="location-under-container">
           <FaSuitcase className="employee-icon" />
           <p className="description5">{employmentType}</p>
         </div>

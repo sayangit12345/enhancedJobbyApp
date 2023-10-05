@@ -28,29 +28,29 @@ const JobsList = props => {
           />
           <div className="eng-container2">
             <h1 className="heading5">{title}</h1>
-            <div className="anc">
+            <div className="rating-item-container">
               <AiFillStar className="star-icons" />
               <p className="description5">{rating}</p>
             </div>
           </div>
         </div>
         <div className="eng-container3">
-          <div className="cef">
-            <div className="bcdt">
+          <div className="eng-loc-container">
+            <div className="eng-loc-icon-container">
               <MdLocationOn className="location-icon" />
               <p className="description5">{location}</p>
             </div>
-            <div className="bcdt">
+            <div className="eng-loc-icon-container">
               <FaSuitcase className="employee-icon" />
               <p className="description5">{employmentType}</p>
             </div>
           </div>
-          <div className="dec">
+          <div className="descrip-container">
             <p className="description5">{packagePerAnnum}</p>
           </div>
         </div>
         <hr className="horizon-line22" />
-        <div className="vbd">
+        <div>
           <h1 className="description667">Description</h1>
           <p className="description6">{jobDescription}</p>
         </div>

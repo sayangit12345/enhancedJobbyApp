@@ -98,6 +98,17 @@
   margin-left: 22px;
 }
 
+.page-location-container {
+  display: flex;
+  width: 200px;
+  align-items: center;
+}
+.page-location-und-container {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
 @media screen and (max-width: 768px) {
   .cards-container11 {
     padding: 10px;

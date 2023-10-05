@@ -25,6 +25,23 @@
   margin-top: 0px;
 }
 
+.location-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 50px;
+}
+
+.location-under-container {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
 .bottom-div {
   display: flex;
   flex-direction: row;
@@ -54,22 +71,6 @@
 }
 .heading22 {
   font-size: 20px;
-}
-.cefd {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  height: 50px;
-}
-
-.bcde {
-  width: 150px;
-  height: 50px;
-  display: flex;
-  margin-right: 10px;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (max-width: 768px) {

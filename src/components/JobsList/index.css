@@ -51,12 +51,29 @@
   text-decoration: none;
 }
 
-.anc {
+.rating-item-container {
   display: flex;
   align-items: center;
   padding-top: 0;
   height: 20px;
 }
+.eng-loc-icon-container {
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.eng-loc-container {
+  display: flex;
+  width: 250px;
+}
+
+.descrip-container {
+  width: 60px;
+  margin-right: 10px;
+}
+
 .star-icons {
   margin-right: 6px;
   color: #fbbf24;
@@ -64,18 +81,6 @@
 
 .eng-container2 {
   margin-left: 8px;
-}
-
-.bcdt {
-  display: flex;
-  padding: 4px;
-  align-items: center;
-  margin-right: 6px;
-}
-
-.cef {
-  display: flex;
-  width: 250px;
 }
 
 .location-icon {
@@ -87,11 +92,6 @@
 .employee-icon {
   color: #ffffff;
   margin-right: 6px;
-}
-
-.dec {
-  width: 60px;
-  margin-right: 10px;
 }
 
 @media screen and (max-width: 768px) {

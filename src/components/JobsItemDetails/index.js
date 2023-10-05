@@ -125,17 +125,17 @@ class JobsItemDetails extends Component {
               </div>
             </div>
             <div className="eng-container3">
-              <div className="cef">
-                <div className="bcdt">
+              <div className="page-location-container">
+                <div className="page-location-und-container">
                   <MdLocationOn className="location-icon" />
                   <p className="description5">{location}</p>
                 </div>
-                <div className="bcdt">
+                <div className="page-location-und-container">
                   <FaSuitcase className="employee-icon" />
                   <p className="description5">{employmentType}</p>
                 </div>
               </div>
-              <div className="dec">
+              <div>
                 <p className="description56">{packagePerAnnum}</p>
               </div>
             </div>
