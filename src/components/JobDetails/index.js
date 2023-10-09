@@ -6,7 +6,7 @@ import {Component} from 'react'
 import {Loader} from 'react-loader-spinner'
 import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
-import SimilarProductItem from '../SimilarProductItem'
+import SimilarJobs from '../SimilarJobs'
 import Header from '../Header'
 import './index.css'
 
@@ -17,15 +17,15 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 }
 
-class JobsItemDetails extends Component {
+class JobDetails extends Component {
   state = {
-    jobsItemList: {},
-    similarJobs: [],
+    companyDetailsList: {},
+    similarJobsList: [],
     apiStatus: apiStatusConstants.initial,
   }
 
   componentDidMount() {
-    this.getJobsDescription()
+    this.getJobDescription()
   }
 
   getFormattedData = data => ({
@@ -34,11 +34,10 @@ class JobsItemDetails extends Component {
     life_at_company: data.life_at_company,
   })
 
-  getJobsDescription = async props => {
+  getJobDescription = async () => {
     const {match} = this.props
     const {params} = match
     const {id} = params
-
     const jwtToken = Cookies.get('jwt_token')
     const option = {
       method: 'GET',
@@ -79,8 +78,8 @@ class JobsItemDetails extends Component {
         title: eachItem.title,
       }))
       this.setState({
-        jobsItemList: updatedJobDetailsData,
-        similarJobs: updatedSimilarJobDetails,
+        companyDetailsList: updatedJobDetailsData,
+        similarJobsList: updatedSimilarJobDetails,
         apiStatus: apiStatusConstants.success,
       })
     }
@@ -92,8 +91,8 @@ class JobsItemDetails extends Component {
   }
 
   rendersuccessDetails = () => {
-    const {jobsItemList, similarJobs} = this.state
-    if (jobsItemList.length >= 1) {
+    const {companyDetailsList, similarJobsList} = this.state
+    if (companyDetailsList.length >= 1) {
       const {
         companyLogoUrl,
         companyWebsiteUrl,
@@ -105,80 +104,82 @@ class JobsItemDetails extends Component {
         rating,
         skills,
         title,
-      } = jobsItemList[0]
+      } = companyDetailsList[0]
 
       return (
         <>
-          <div className="cards-container11">
-            <div className="eng-container">
+          <div className="job-detailss-container">
+            <div className="company-logo-container">
               <img
                 src={companyLogoUrl}
                 alt="job details company logo"
                 className="company-image"
               />
-              <div className="eng-container2">
-                <h1 className="heading5">{title}</h1>
-                <div className="front-container">
+              <div className="company-title-container">
+                <h1 className="company-title-heading">{title}</h1>
+                <div className="company-rating-container">
                   <AiFillStar className="star-icon" />
-                  <p className="description5">{rating}</p>
+                  <p className="company-rating-description">{rating}</p>
                 </div>
               </div>
             </div>
-            <div className="eng-container3">
-              <div className="page-location-container">
-                <div className="page-location-und-container">
+            <div className="company-location-container">
+              <div className="company-page-location-container">
+                <div className="page-location-container">
                   <MdLocationOn className="location-icon" />
-                  <p className="description5">{location}</p>
+                  <p className="company-location-description">{location}</p>
                 </div>
-                <div className="page-location-und-container">
-                  <FaSuitcase className="employee-icon" />
-                  <p className="description5">{employmentType}</p>
+                <div className="page-location-container">
+                  <FaSuitcase className="employee-type-icon" />
+                  <p className="company-description">{employmentType}</p>
                 </div>
               </div>
               <div>
-                <p className="description56">{packagePerAnnum}</p>
+                <p className="company-package-description">{packagePerAnnum}</p>
               </div>
             </div>
-            <hr className="horizon-line2" />
-            <div className="upper-container">
-              <h1 className="description55">Description</h1>
-              <a href={companyWebsiteUrl} className="anchor-el">
+            <hr className="company-horizontal-line" />
+            <div className="company-description-container">
+              <h1 className="company-heading">Description</h1>
+              <a href={companyWebsiteUrl} className="company-visit-url">
                 Visit <BiLinkExternal />
               </a>
             </div>
-            <p className="description6">{jobDescription}</p>
-            <h1 className="description6">Skills</h1>
-            <ul className="containers5">
+            <p className="company-description">{jobDescription}</p>
+            <h1 className="company-skills-heading">Skills</h1>
+            <ul className="company-skills-image-container">
               {skills.map(eachItem => (
-                <li key={eachItem.name} className="items">
+                <li key={eachItem.name} className="skills-items">
                   <img
                     src={eachItem.imageUrl}
                     alt={eachItem.name}
-                    className="image4"
+                    className="skill-image"
                   />
-                  <p className="description6">{eachItem.name}</p>
+                  <p className="skill-description">{eachItem.name}</p>
                 </li>
               ))}
             </ul>
-            <div className="back-container">
+            <div className="company-life-container">
               <div>
-                <h1 className="description6">Life at Company</h1>
-                <p className="description6">{lifeAtCompany.description}</p>
+                <h1 className="company-life-heading">Life at Company</h1>
+                <p className="company-life-description">
+                  {lifeAtCompany.description}
+                </p>
               </div>
-              <div className="bottom-container">
+              <div className="company-life-image-container">
                 <img
                   src={lifeAtCompany.imageUrl}
                   alt="life at company"
-                  className="image10"
+                  className="company-profile-image"
                 />
               </div>
             </div>
           </div>
-          <div className="similar-container">
-            <h1 className="description66">Similar Jobs</h1>
-            <ul className="similar-list">
-              {similarJobs.map(eachItem => (
-                <SimilarProductItem key={eachItem.id} jobsDetails={eachItem} />
+          <div className="similar-jobs-container">
+            <h1 className="similar-job-heading">Similar Jobs</h1>
+            <ul className="similar-jobs-list-container">
+              {similarJobsList.map(eachItem => (
+                <SimilarJobs key={eachItem.id} similarJobsDetails={eachItem} />
               ))}
             </ul>
           </div>
@@ -232,11 +233,13 @@ class JobsItemDetails extends Component {
 
   render() {
     return (
-      <>
+      <div className="job-page-details-container">
         <Header />
-        <div className="bg-container2">{this.renderJobDetails()}</div>
-      </>
+        <div className="job-description-container">
+          {this.renderJobDetails()}
+        </div>
+      </div>
     )
   }
 }
-export default JobsItemDetails
+export default JobDetails

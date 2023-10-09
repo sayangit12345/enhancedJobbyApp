@@ -21,25 +21,28 @@ const Header = props => {
           className="header-image"
         />
       </Link>
-      <div className="card-container">
-        <div>
+      <ul className="navbar-option-container">
+        <li>
           <Link to="/" className="nav-link">
             Home
           </Link>
+        </li>
+        <li>
           <Link to="/" className="nav-link-sm">
             <AiFillHome className="small-header-icons" />
           </Link>
+        </li>
+        <li>
           <Link to="/jobs" className="nav-link">
             Jobs
           </Link>
+        </li>
+        <li>
           <Link to="/jobs" className="nav-link-sm">
             <BsFillBriefcaseFill className="small-header-icons" />
           </Link>
-        </div>
-        <div>
-          <button type="button" className="button2" onClick={onClickLogOut}>
-            Logout
-          </button>
+        </li>
+        <li>
           <button
             type="button"
             className="logout-icon-sm"
@@ -47,8 +50,11 @@ const Header = props => {
           >
             <FiLogOut className="logout-icon-sm" />
           </button>
-        </div>
-      </div>
+        </li>
+      </ul>
+      <button type="button" className="logout-button" onClick={onClickLogOut}>
+        Logout
+      </button>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import './index.css'
 import Header from '../Header'
-import AllJobsSection from '../AllJobsSection'
+import AllJobsList from '../AllJobsList'
 
 const Jobs = () => (
-  <div className="main-container2">
+  <div className="filter-and-all-jobs-container">
     <Header />
-    <AllJobsSection />
+    <AllJobsList />
   </div>
 )
 export default Jobs

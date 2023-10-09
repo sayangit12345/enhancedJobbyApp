@@ -26,14 +26,14 @@
 }
 
 .logout-icon-sm {
-  background-color: transparent;
   border-width: 0px;
   color: #ffffff;
   height: 15px;
   width: 15px;
+  background-color: transparent;
 }
 
-.button2 {
+.logout-button {
   background-color: #6366f1;
   color: #f8fafc;
   font-family: 'Roboto';
@@ -45,16 +45,14 @@
   margin-right: 25px;
   font-size: 15px;
 }
-.card-container {
+.navbar-option-container {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 800px;
 }
 
 @media screen and (max-width: 768px) {
-  .card-container {
+  .navbar-option-container {
     list-style-type: none;
     width: 100px;
     display: flex;
@@ -63,7 +61,7 @@
   .nav-link {
     display: none;
   }
-  .button2 {
+  .logout-button {
     display: none;
   }
 }

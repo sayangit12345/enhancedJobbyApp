@@ -1,6 +1,13 @@
-.main-container2 {
+.filter-and-all-jobs-container {
   background-color: #000000;
   background-size: cover;
-  height: 2600vh;
+  height: 2460vh;
   width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-and-all-jobs-container {
+    height: 4400vh;
+    width: 100vw;
+  }
 }

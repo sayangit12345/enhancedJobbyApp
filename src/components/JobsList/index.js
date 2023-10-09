@@ -18,41 +18,43 @@ const JobsList = props => {
   } = allJobsDetails
 
   return (
-    <li className="list-items">
-      <Link to={`/jobs/${id}`} className="nav-links2">
-        <div className="eng-container">
+    <li className="all-jobs-list">
+      <Link to={`/jobs/${id}`} className="all-jobs-nav-link">
+        <div className="all-jobs-list-container">
           <img
             src={companyLogoUrl}
             alt="company logo"
             className="company-image"
           />
-          <div className="eng-container2">
-            <h1 className="heading5">{title}</h1>
-            <div className="rating-item-container">
-              <AiFillStar className="star-icons" />
-              <p className="description5">{rating}</p>
+          <div className="all-jobs-title-container">
+            <h1 className="all-jobs-title-heading">{title}</h1>
+            <div className="all-jobs-rating-container">
+              <AiFillStar className="star-icon" />
+              <p className="all-jobs-description">{rating}</p>
             </div>
           </div>
         </div>
-        <div className="eng-container3">
-          <div className="eng-loc-container">
-            <div className="eng-loc-icon-container">
+        <div className="all-jobs-location-and-employement-container">
+          <div className="all-jobs-location-container">
+            <div className="all-jobs-location-icon-container">
               <MdLocationOn className="location-icon" />
-              <p className="description5">{location}</p>
+              <p className="all-jobs-location-description">{location}</p>
             </div>
-            <div className="eng-loc-icon-container">
+            <div className="all-jobs-location-icon-container">
               <FaSuitcase className="employee-icon" />
-              <p className="description5">{employmentType}</p>
+              <p className="all-jobs-employement-description">
+                {employmentType}
+              </p>
             </div>
           </div>
-          <div className="descrip-container">
-            <p className="description5">{packagePerAnnum}</p>
+          <div className="all-jobs-package-container">
+            <p className="all-jobs-package-description">{packagePerAnnum}</p>
           </div>
         </div>
-        <hr className="horizon-line22" />
-        <div>
-          <h1 className="description667">Description</h1>
-          <p className="description6">{jobDescription}</p>
+        <hr className="all-jobs-horizon-line" />
+        <div className="all-jobs-description-container">
+          <h1 className="all-jobs-job-heading">Description</h1>
+          <p className="all-jobs-job-description">{jobDescription}</p>
         </div>
       </Link>
     </li>

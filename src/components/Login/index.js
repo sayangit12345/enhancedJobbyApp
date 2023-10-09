@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
 import './index.css'
 
-const LoginForm = props => {
+const Login = props => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [errormasage, setErrorMsg] = useState('')
@@ -50,8 +50,8 @@ const LoginForm = props => {
     return <Redirect to="/" />
   }
   return (
-    <div className="bg-container">
-      <form className="form-container" onSubmit={onSubmitForm}>
+    <div className="login-container">
+      <form className="form-container" onSubmit={onSubmitForm} id="loginForm">
         <img
           src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
           alt="website logo"
@@ -64,7 +64,7 @@ const LoginForm = props => {
           <input
             type="text"
             id="username"
-            className="input-el"
+            className="input-element"
             value={username}
             placeholder="Username"
             onChange={onChangeUsername}
@@ -77,7 +77,7 @@ const LoginForm = props => {
           <input
             type="password"
             id="password"
-            className="input-el"
+            className="input-element"
             value={password}
             placeholder="Password"
             onChange={onChangePassword}
@@ -86,9 +86,9 @@ const LoginForm = props => {
         <button type="submit" className="button">
           Login
         </button>
-        {showsubmiterror && <p className="description">*{errormasage}</p>}
+        {showsubmiterror && <p className="login-description">*{errormasage}</p>}
       </form>
     </div>
   )
 }
-export default LoginForm
+export default Login

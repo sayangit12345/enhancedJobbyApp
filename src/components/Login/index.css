@@ -1,4 +1,4 @@
-.bg-container {
+.login-container {
   background-color: #000000;
   background-size: cover;
   height: 100vh;
@@ -35,7 +35,7 @@
   margin-bottom: 5px;
 }
 
-.input-el {
+.input-element {
   height: 30px;
   width: 250px;
   background-color: transparent;
@@ -54,7 +54,7 @@
   width: 250px;
   margin-top: 10px;
 }
-.description {
+.login-description {
   font-family: 'Roboto';
   color: #ff0b37;
   font-size: 10px;

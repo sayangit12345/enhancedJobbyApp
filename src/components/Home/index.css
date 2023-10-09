@@ -1,20 +1,20 @@
 @media screen and (min-width: 576px) {
-  .main-container {
+  .home-container {
     background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
     background-size: cover;
     height: 100vh;
   }
-  .heading {
+  .home-page-heading {
     font-family: 'Roboto';
     font-size: 68px;
     color: #f8fafc;
   }
-  .description3 {
+  .home-page-description {
     font-family: 'Roboto';
     font-size: 22px;
     color: #f8fafc;
   }
-  .button3 {
+  .find-jobs-button {
     background-color: #6366f1;
     color: #f8fafc;
     font-family: 'Roboto';
@@ -25,7 +25,7 @@
     margin-top: 10px;
     font-size: 15px;
   }
-  .card-container2 {
+  .home-page-container {
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -37,22 +37,22 @@
 }
 
 @media screen and (max-width: 575px) {
-  .main-container {
+  .home-container {
     background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
     background-size: cover;
     height: 100vh;
   }
-  .heading {
+  .home-page-heading {
     font-family: 'Roboto';
     font-size: 28px;
     color: #f8fafc;
   }
-  .description3 {
+  .home-page-description {
     font-family: 'Roboto';
     font-size: 22px;
     color: #f8fafc;
   }
-  .button3 {
+  .find-jobs-button {
     background-color: #6366f1;
     color: #f8fafc;
     font-family: 'Roboto';
@@ -62,7 +62,7 @@
     width: 100px;
     margin-top: 10px;
   }
-  .card-container2 {
+  .home-page-container {
     margin: 30px;
     display: flex;
     flex-direction: column;

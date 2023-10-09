@@ -3,8 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 100vh;
+  background-color: #000000;
 }
 .not-found-img {
   width: 400px;
+}
+.not-found-heading {
+  color: #ffffff;
+}
+.not-found-description {
+  color: #ffffff;
 }
