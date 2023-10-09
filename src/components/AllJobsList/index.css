@@ -107,7 +107,7 @@
   .job-list-container {
     display: flex;
     flex-direction: column;
-    width: 380px;
+    width: 360px;
   }
   .search-input-container {
     width: 290px;

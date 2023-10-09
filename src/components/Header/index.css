@@ -64,6 +64,9 @@
   .logout-button {
     display: none;
   }
+  .navbar-container {
+    width: 97vw;
+  }
 }
 @media screen and (min-width: 768px) {
   .small-header-icons {

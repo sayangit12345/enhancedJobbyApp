@@ -38,11 +38,35 @@ const salaryRangesList = [
   },
 ]
 
+const locationList = [
+  {
+    locationListId: 'HYDERABAD',
+    label: 'Hyderabad',
+  },
+  {
+    locationListId: 'BANGALORE',
+    label: 'Bangalore',
+  },
+  {
+    locationListId: 'CHENNAI',
+    label: 'Chennai',
+  },
+  {
+    locationListId: 'DELHI',
+    label: 'Delhi',
+  },
+  {
+    locationListId: 'MUMBAI',
+    label: 'Mumbai',
+  },
+]
+
 const FilterJobs = props => {
   const {
     changeEmployementType,
     changeSalary,
-    clearAllFilter,
+    changeLocation,
+    // clearAllFilter,
     profileData,
   } = props
 
@@ -54,9 +78,13 @@ const FilterJobs = props => {
     changeSalary(event.target.value)
   }
 
-  const onClickClearAll = () => {
-    clearAllFilter()
+  const onChangeLocation = event => {
+    changeLocation(event.target.value)
   }
+
+  //   const onClickClearAll = () => {
+  //     clearAllFilter()
+  //   }
 
   const renderProfileDetails = () => {
     if (profileData.length >= 1) {
@@ -121,14 +149,37 @@ const FilterJobs = props => {
             </li>
           ))}
         </ul>
-        <button
-          type="button"
-          className="clear-all-button"
-          onClick={onClickClearAll}
-        >
-          Clear All
-        </button>
       </div>
+      <hr className="horizontal-line" />
+      <div className="location-filter-container">
+        <h1 className="location-heading">Location</h1>
+        <ul className="location-type-list-container">
+          {locationList.map(eachItem => (
+            <li className="location-list-item" key={eachItem.locationListId}>
+              <input
+                type="checkbox"
+                value={eachItem.locationListId}
+                id={eachItem.locationListId}
+                onChange={onChangeLocation}
+                name="location"
+              />
+              <label
+                className="location-label"
+                htmlFor={eachItem.locationListId}
+              >
+                {eachItem.label}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* <button
+        type="button"
+        className="clear-all-button"
+        onClick={onClickClearAll}
+      >
+        Clear All
+      </button> */}
     </div>
   )
 }

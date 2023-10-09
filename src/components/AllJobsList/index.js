@@ -21,6 +21,7 @@ class AllJobsList extends Component {
     salaryRange: [],
     apiStatus: apiStatusConstants.initial,
     allJobsList: [],
+    locationlist: [],
   }
 
   componentDidMount() {
@@ -33,7 +34,7 @@ class AllJobsList extends Component {
   }
 
   onChangeSearchInput = event => {
-    this.setState({salaryRange: event.target.value})
+    this.setState({searchInputValue: event.target.value})
   }
 
   onChangeEmployementType = typeId => {
@@ -51,18 +52,31 @@ class AllJobsList extends Component {
     this.setState({salaryRange: valueTwo}, this.getJobsList)
   }
 
-  onClickClearAllFilter = () => {
-    this.setState({salaryRange: [], employementTypeList: []}, this.getJobsList)
-  }
+  //   onClickClearAllFilter = () => {
+  //     this.setState(
+  //       {salaryRange: [], employementTypeList: [], locationlist: []},
+  //       this.getJobsList,
+  //     )
+  //   }
 
   onClickRetryJobs = () => {
     this.getJobsList()
   }
 
+  onChangeLocation = locationid => {
+    this.setState({locationlist: locationid}, this.getJobsList)
+  }
+
   getJobsList = async () => {
-    const {searchInputValue, employementTypeList, salaryRange} = this.state
+    const {
+      searchInputValue,
+      employementTypeList,
+      salaryRange,
+      locationlist,
+    } = this.state
+    console.log(searchInputValue)
     const jwtToken = Cookies.get('jwt_token')
-    const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employementTypeList}&minimum_package=${salaryRange}&search=${searchInputValue}`
+    const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employementTypeList}&minimum_package=${salaryRange}&search=${searchInputValue}&location=${locationlist}`
     const option = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -214,8 +228,9 @@ class AllJobsList extends Component {
         <FilterJobs
           changeEmployementType={this.onChangeEmployementType}
           changeSalary={this.onChangeSalary}
+          changeLocation={this.onChangeLocation}
           profileData={profileData}
-          clearAllFilter={this.onClickClearAllFilter}
+          //   clearAllFilter={this.onClickClearAllFilter}
         />
         {this.renderAllJobs()}
       </div>

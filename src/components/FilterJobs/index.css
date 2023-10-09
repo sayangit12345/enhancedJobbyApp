@@ -5,6 +5,13 @@
   margin-left: 5px;
 }
 
+.location-label {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: 5px;
+}
+
 .salary-label {
   font-family: 'Roboto';
   font-size: 15px;
@@ -30,6 +37,11 @@
   height: 100px;
   width: 250px;
 }
+.location-type-list-container {
+  padding-left: 0;
+  height: 100px;
+  width: 250px;
+}
 
 .salary-range-list-container {
   padding-left: 0;
@@ -38,6 +50,10 @@
 }
 
 .employement-list-item {
+  padding-left: 0;
+  padding: 4px;
+}
+.location-list-item {
   padding-left: 0;
   padding: 4px;
 }
@@ -58,12 +74,22 @@
   height: 170px;
   width: 250px;
 }
+.location-filter-container {
+  height: 200px;
+  width: 250px;
+}
 .salary-filter-container {
   height: 170px;
   width: 250px;
 }
 
 .employement-heading {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.location-heading {
   font-family: 'Roboto';
   font-size: 16px;
   color: #ffffff;
@@ -108,7 +134,7 @@
     flex-direction: column;
     margin-left: 10px;
     width: 320px;
-    height: 700px;
+    height: 820px;
   }
   .profile-container {
     height: 200px;
@@ -116,6 +142,10 @@
   }
   .employement-filter-container {
     height: 170px;
+    width: 300px;
+  }
+  .location-filter-container {
+    height: 250px;
     width: 300px;
   }
   .salary-filter-container {
@@ -141,6 +171,7 @@
 @media screen and (min-width: 768px) {
   .filter-jobs-container {
     padding-left: 0;
+    height: 850px;
   }
   .horizontal-line {
     width: 250px;

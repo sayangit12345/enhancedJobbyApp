@@ -162,9 +162,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .similar-jobs-container {
+    width: 360px;
+  }
   .job-page-details-container {
     background-color: #000000;
-    height: 300vh;
+    height: 320vh;
   }
   .job-detailss-container {
     padding: 10px;
@@ -198,6 +201,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    width: 360px;
   }
   .company-skills-heading {
     font-size: 10px;
@@ -217,6 +221,9 @@
   }
   .similar-job-heading {
     margin-left: 36px;
+  }
+  .company-logo-container {
+    width: 250px;
   }
 }
 

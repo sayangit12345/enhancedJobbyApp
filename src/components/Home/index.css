@@ -1,4 +1,4 @@
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 765px) {
   .home-container {
     background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
     background-size: cover;
@@ -36,11 +36,11 @@
   }
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 765px) {
   .home-container {
     background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
     background-size: cover;
-    height: 100vh;
+    height: 110vh;
   }
   .home-page-heading {
     font-family: 'Roboto';
