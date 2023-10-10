@@ -16,6 +16,13 @@
   font-family: 'Roboto';
   font-size: 20px;
   color: #f8fafc;
+  margin-right: 5px;
+  text-decoration: none;
+}
+.nav-link-lg {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #f8fafc;
   margin-right: 10px;
   text-decoration: none;
 }
@@ -26,11 +33,7 @@
 }
 
 .logout-icon-sm {
-  border-width: 0px;
   color: #ffffff;
-  height: 15px;
-  width: 15px;
-  background-color: transparent;
 }
 
 .logout-button {
@@ -49,23 +52,22 @@
   list-style-type: none;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
   .navbar-option-container {
     list-style-type: none;
-    width: 100px;
+    width: 120px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+    margin-right: 40px;
   }
-  .nav-link {
+  .nav-link-lg {
     display: none;
   }
   .logout-button {
     display: none;
-  }
-  .navbar-container {
-    width: 97vw;
   }
 }
 @media screen and (min-width: 768px) {
